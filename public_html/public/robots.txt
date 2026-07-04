@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Disallow: /admin/login
-Disallow: /admin/register
-
-Sitemap: https://creativeitpark.org/sitemap.xml
