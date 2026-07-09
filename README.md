@@ -292,6 +292,186 @@ php artisan serve
 cd cip-frontend
 
 npm install
+---
 
+# Environment Configuration
+
+Create a `.env` file inside the backend directory and configure the following variables according to your local environment.
+
+```env
+APP_NAME=CreativeITPark
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=creative_it_park
+DB_USERNAME=root
+DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=your-mail-host
+MAIL_PORT=587
+MAIL_USERNAME=your-email
+MAIL_PASSWORD=your-password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=info@example.com
+MAIL_FROM_NAME="Creative IT Park"
+```
+
+After configuration run:
+
+```bash
+php artisan config:clear
+php artisan cache:clear
+php artisan optimize
+```
+
+---
+
+# Deployment
+
+The application was deployed to a live production server using a shared hosting environment.
+
+Deployment included:
+
+- Uploading backend and frontend to production
+- cPanel configuration
+- DNS configuration
+- SSL installation
+- Environment configuration
+- Composer dependency installation
+- Laravel optimization commands
+- Storage permissions
+- Production debugging
+- Final verification before release
+
+Deployment was completed successfully after resolving server compatibility issues.
+
+---
+
+# Engineering Challenge
+
+## PHP Version Compatibility
+
+One of the biggest challenges during deployment was a PHP version mismatch between the local development environment and the production server.
+
+The application was initially developed using PHP 8.x features, while the production server was running PHP 7.4. Several language features worked correctly during development but caused failures after deployment.
+
+In addition, incorrect storage permissions prevented Laravel from writing cache and log files, resulting in silent runtime failures.
+
+---
+
+# Solution
+
+Instead of introducing temporary fixes, the deployment process was reviewed systematically.
+
+The following actions were performed:
+
+- Identified PHP compatibility issues
+- Replaced unsupported syntax where required
+- Corrected storage permissions
+- Cleared Laravel configuration and application cache
+- Verified environment variables
+- Re-tested every major application workflow
+- Established a repeatable deployment checklist
+
+The application was successfully deployed without affecting production stability.
+
+---
+
+# Key Engineering Decisions
+
+Several engineering decisions contributed to the maintainability of the project:
+
+- Separate public website from administration functionality
+- Use Laravel Resource Controllers for cleaner CRUD operations
+- Use Eloquent ORM for maintainable database interactions
+- Keep business logic organized using Laravel conventions
+- Separate frontend presentation from backend management
+- Build reusable components wherever possible
+- Prioritize maintainability over quick fixes
+
+---
+
+# Lessons Learned
+
+This project reinforced several important software engineering principles.
+
+- Production environments differ from local development.
+- Deployment requires verification beyond writing application code.
+- Environment configuration is as important as implementation.
+- Small architectural decisions significantly improve long-term maintainability.
+- Reading documentation before deployment saves considerable debugging time.
+- A structured deployment checklist reduces production risks.
+
+This experience significantly improved my understanding of production-ready Laravel application development.
+
+---
+
+# Future Improvements
+
+Potential future enhancements include:
+
+- Docker-based development environment
+- CI/CD pipeline using GitHub Actions
+- Role-based access control for administrators
+- Image optimization pipeline
+- Activity logging
+- Audit trails
+- API versioning
+- Automated testing
+- Performance monitoring
+- Cloud deployment support
+
+---
+
+# Repository Status
+
+| Status | Value |
+|--------|-------|
+| Project | Completed |
+| Production | ✅ Deployed |
+| Repository | Active |
+| Maintenance | Available |
+| Documentation | Complete |
+
+---
+
+# License
+
+This repository is shared for portfolio and educational purposes.
+
+Source code remains the intellectual property of its respective owner where applicable.
+
+---
+
+# Author
+
+## Muhammad Faizan Khan
+
+Full-Stack Web Developer
+
+Building production-ready web applications using Laravel, PHP, React.js, Node.js, and MySQL.
+
+### Connect
+
+- Portfolio: https://faizans-portfolio.vercel.app
+- LinkedIn: https://linkedin.com/in/muhammad-faizan-khan-x7
+- GitHub: https://github.com/mfaizanx7
+
+---
+
+<div align="center">
+
+### Thank you for visiting this repository.
+
+If you found this project interesting, consider giving it a ⭐.
+
+</div>
 npm run dev
 ```
