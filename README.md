@@ -293,7 +293,8 @@ cd cip-frontend
 
 npm install
 ---
-
+npm run dev
+```
 # Environment Configuration
 
 Create a `.env` file inside the backend directory and configure the following variables according to your local environment.
@@ -473,5 +474,3 @@ Building production-ready web applications using Laravel, PHP, React.js, Node.js
 If you found this project interesting, consider giving it a ⭐.
 
 </div>
-npm run dev
-```
